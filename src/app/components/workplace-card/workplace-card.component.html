@@ -1,0 +1,17 @@
+<div style="width: 30%; min-width: 30%; max-width: 30%">
+  <h4>{{ workplace.company }}</h4>
+  <p>{{ workplace.years[0] }} - {{ workplace.years[1] }}</p>
+</div>
+<div style="flex-grow: 1; padding-bottom: 20px">
+  <h4>{{ workplace.title }}</h4>
+  <p>
+    {{ workplace.description }}
+  </p>
+  <div class="flex-row start-center wrap">
+    <app-skill-pill
+      style="margin: 3px"
+      *ngFor="let skill of workplace.skills"
+      [skill]="skill"
+    ></app-skill-pill>
+  </div>
+</div>

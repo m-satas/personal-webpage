@@ -1,0 +1,21 @@
+<div class="flex-row sp-even-center">
+  <img
+    *ngFor="let image of project.images"
+    class="screen"
+    src="{{ image.src }}"
+    alt="{{ image.alt }}"
+  />
+</div>
+<div>
+  <h2>{{ project.title }}</h2>
+  <p>
+    {{ project.description }}
+  </p>
+  <div class="flex-row start-center wrap">
+    <app-skill-pill
+      style="margin: 3px"
+      *ngFor="let skill of project.skills"
+      [skill]="skill"
+    ></app-skill-pill>
+  </div>
+</div>
