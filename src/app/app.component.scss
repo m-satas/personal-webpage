@@ -43,10 +43,14 @@
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.pop-out-card:hover {
-    background: rgba(255, 255, 255, 0.300);
+%pop-out-raised {
+    background: rgba(255, 255, 255, 0.3);
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pop-out-card:hover {
+    @extend %pop-out-raised;
 }
 
 .svg-icon-pop {
@@ -127,13 +131,12 @@
         flex-direction: column;
     }
 
-    .pop-out-card:hover {
-        background: unset;
-        transform: unset;
-        box-shadow: unset;
+    .pop-out-card {
+        @extend %pop-out-raised;
     }
 
     .pointer-effect {
         display: none;
     }
 }
+
