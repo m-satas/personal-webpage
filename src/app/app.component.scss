@@ -97,6 +97,11 @@
     width: 48%;
 }
 
+.education-card-content {
+    height: 100%;
+    width: 100%;
+}
+
 @media screen and (max-width: 1250px) {
 
     .header {
@@ -116,6 +121,14 @@
     .lg-only {
         display: none;
     }
+
+    .pop-out-card {
+        @include pop-out-raised;
+    }
+
+    .education-card {
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -130,10 +143,6 @@
 
     .sm-flex-col {
         flex-direction: column;
-    }
-
-    .pop-out-card {
-        @include pop-out-raised;
     }
 
     .pointer-effect {
