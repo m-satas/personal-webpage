@@ -16,6 +16,14 @@ export class AppComponent {
 
   public workplaces: Workplace[] = [
     {
+      company: 'twoday',
+      website: 'https://www.twoday.lt/',
+      years: ['2024', '2025'],
+      title: 'Full Stack Web Developer',
+      description: 'Devoloping and maintaining features on twoday’s casehandling system for private and public sector clients.',
+      skills: ['HTML', 'SCSS', 'JavaScript', 'Typescript', 'Angular', 'Java', 'Spring', 'MariaDB', 'Liferay']
+    },
+    {
       company: 'Avilda',
       website: 'https://www.avilda.eu/',
       years: ['2022', '2024'],
@@ -28,7 +36,7 @@ export class AppComponent {
       website: 'https://www.tgw-group.com/en/career/work-tgw/locations/lithuania',
       years: ['2022', '2022'],
       title: 'Simulation Engineer',
-      description: 'Simulation development for fully atomated warehouses using .NET (C#)',
+      description: 'Simulation development for fully automated warehouses using .NET (C#)',
       skills: ['C#', '.NET', 'MySQL', 'PowerBI', 'Grafana']
     },
     {
