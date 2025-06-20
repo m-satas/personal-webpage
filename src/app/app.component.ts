@@ -19,7 +19,7 @@ export class AppComponent {
       company: 'twoday',
       website: 'https://www.twoday.lt/',
       years: ['2024', '2025'],
-      title: 'Full Stack Web Developer',
+      title: 'Full-Stack Web Developer',
       description: 'Devoloping and maintaining features on twoday’s casehandling system for private and public sector clients.',
       skills: ['HTML', 'SCSS', 'JavaScript', 'Typescript', 'Angular', 'Java', 'Spring', 'MariaDB', 'Liferay']
     },
@@ -27,7 +27,7 @@ export class AppComponent {
       company: 'Avilda',
       website: 'https://www.avilda.eu/',
       years: ['2022', '2024'],
-      title: 'Full Stack Web Developer',
+      title: 'Full-Stack Web Developer',
       description: 'Developing Avilda’s own warehouse management system product using Angular and Node.js.',
       skills: ['HTML', 'SCSS', 'JavaScript', 'Typescript', 'Angular', 'Angular Material', 'Node.js', 'Express', 'MySQL']
     },
@@ -89,7 +89,7 @@ export class AppComponent {
       skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Angular Material', 'PWA', 'Node.js', 'Express', 'Socket.io', 'Nginx']
     }
   ]
-  public skills: string[] = ['HTML', 'SCSS', 'JavaScript', 'TypeScript', 'Angular', 'Angular Material', 'Node.js', 'Express', 'MySQL', 'Photoshop'];
+  public skills: string[] = ['HTML', 'SCSS', 'JavaScript', 'TypeScript', 'Angular', 'Angular Material', '.NET', 'C#', 'Spring', 'Java', 'Liferay', 'Node.js', 'Express', 'MySQL', 'Photoshop'];
 
   mouseX: number = 0;
   mouseY: number = 0;

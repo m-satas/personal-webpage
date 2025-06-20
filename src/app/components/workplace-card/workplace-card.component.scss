@@ -6,3 +6,9 @@
     padding: 10px;
     margin: 5px;
 }
+
+@media print {
+    :host {
+        padding: 0px;
+    }
+}

@@ -6,9 +6,19 @@
   style="max-width: 1280px; margin: 0px auto; column-gap: 50px"
 >
   <header class="flex-col sp-around-center content-column header">
-    <div>
+    <div class="contacts">
+      <img
+        class="profile-image"
+        src="assets/MSatas.jpg"
+        alt="Mindaugas Šatas profile image"
+        style="height: 150px; margin-bottom: 5px"
+      />
+      <a>m&#64;satas.me</a>
+      <a>+37065519547</a>
+    </div>
+    <div style="flex-grow: 1">
       <h1>Mindaugas ŠATAS</h1>
-      <h2>Web developer</h2>
+      <h2>Full-Stack Web Developer</h2>
       <p>Eager to create and learn.</p>
       <nav class="lg-only mt-50">
         <ul>
@@ -18,11 +28,10 @@
           <li class="mb-20 link"><a href="#education">EDUCATION</a></li>
         </ul>
       </nav>
-      <div class="flex-row center-center mt-50">
+      <div class="links" style="display: flex; align-items: center; gap: 15px">
         <a
           href="https://www.linkedin.com/in/mindaugas-%C5%A1atas-9ab05663/"
           target="_blank"
-          style="margin-right: 15px"
         >
           <svg
             class="svg-icon-pop"
@@ -50,11 +59,35 @@
             ></path>
           </svg>
         </a>
+        <button
+          class="svg-icon-pop no-print"
+          style="background: none; border: none; cursor: pointer; padding: 0"
+          onclick="window.print()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 1 24 24"
+            width="30"
+            height="30"
+            fill="none"
+            stroke="rgb(0, 50, 0)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"
+            ></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="8" y1="13" x2="16" y2="13"></line>
+            <line x1="8" y1="17" x2="16" y2="17"></line>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
-  <main class="content-column" style="padding: 90px 0px">
-    <section class="mb-70">
+  <main class="content-column">
+    <section class="section-margin">
       <h1>About</h1>
       <p>
         Since early childhood I was fascinated with computers, games and
@@ -75,11 +108,11 @@
         warehouse simulations using C# or for data processing as a data analyst
         with Python (and some VBA).
       </p>
-      <p style="margin-bottom: 50px">
+      <p class="about-skill-mb">
         Now I continue to explore coding and visual design, driven by the joy of
         creation and the lessons learned from the process.
       </p>
-      <div class="flex-row center-center wrap">
+      <div class="flex-row center-center wrap" style="margin-bottom: 5px">
         <app-skill-pill
           style="margin: 3px"
           *ngFor="let skill of skills"
@@ -87,7 +120,7 @@
         ></app-skill-pill>
       </div>
     </section>
-    <section id="projects" class="flex-col start-start mb-70">
+    <section id="projects" class="flex-col start-start section-margin">
       <h1>Projects</h1>
       <a
         *ngFor="let project of projects"
@@ -95,24 +128,18 @@
         href="{{ project.website }}"
         target="_blank"
       >
-        <app-project
-          style="margin-bottom: 15px"
-          [project]="project"
-        ></app-project>
+        <app-project [project]="project"></app-project>
       </a>
     </section>
-    <section id="experience" class="flex-col start-start mb-70">
+    <section id="experience" class="flex-col start-start section-margin">
       <h1>Experience</h1>
       <a
         *ngFor="let workplace of workplaces"
-        class="pop-out-card mb-20"
+        class="pop-out-card item-mb"
         href="{{ workplace.website }}"
         target="_blank"
       >
-        <app-workplace-card
-          style="margin-bottom: 15px"
-          [workplace]="workplace"
-        ></app-workplace-card>
+        <app-workplace-card [workplace]="workplace"></app-workplace-card>
       </a>
     </section>
     <section id="education">
@@ -153,3 +180,11 @@
     </section>
   </main>
 </div>
+
+<style>
+  @media print {
+    .no-print {
+      display: none;
+    }
+  }
+</style>
